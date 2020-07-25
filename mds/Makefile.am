@@ -1,5 +1,5 @@
 # what flags you want to pass to the Fortran compiler & linker
-FFLAGS = -g -w -fno-range-check -fno-automatic -fcray-pointer -std=legacy
+FFLAGS = -g -w -fno-range-check -fno-automatic -fcray-pointer -fallow-invalid-boz -std=legacy
 
 # this lists the binaries to produce, the (non-PHONY, binary) targets in
 # the previous manual Makefile
@@ -23,4 +23,3 @@ dbmdfc.f  dsblpk.f  dsmsg1.f  dsskfb.f	exford.f  khrfn1.f  rewind.f  zntpki.f \
 dbmdia.f  dsbpnk.f  dsmsg.f   dsskff.f	exfort.f  khrfn4.f  rfopen.f
 
 nastran_LDADD = ../mis/libnastran.a ../bd/libnastbd.a
-
